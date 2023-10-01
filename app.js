@@ -1,27 +1,39 @@
 
 var name, gender,preName,type,nameOfDrink;
 
-setTimeout(()=>{
-    name = window.prompt("Enter Your Name : ");
-    gender = window.prompt("Enter Your Gender : ");
-    
-console.log(name)
-if(gender == "male"){
-alert("Welcome mr." + name)
-preName = "mr";
-}
-else if (gender == "female") {
-    alert("Welcome mrs." + name)
-    preName = "mr";
-}
-else {
-    alert("Welcome");
-}},3000);
 
-  
-setTimeout(()=>{
-type = window.prompt("type of your drink : ");
+    name = window.prompt("Enter Your Name : ");
+
+console.log(name)
+function maleOrFemale(){
+while(gender != "male" || gender !="female"){
+    gender = window.prompt("Enter Your Gender : ");
+if(gender == "male"){
+        
+alert("Welcome mr." + name);
+break;
+}
+
+else if (gender == "female") {
+    alert("Welcome ms." + name);
+break;    
+}
+}}
+
+// do{gender = window.prompt("Enter Your Gender : ");}
+
+// while(gender != "male" && gender !="female")
+
+// else if(gender != "male" && gender !="female"){
+// gender = window.prompt("Enter Your Gender : ");
+// }
+
+
+type = window.prompt("type of your drink hot/cold : ");
 nameOfDrink = window.prompt("name of your drink : ");
 alert("order getting prepared");
-console.log( preName + "."+name +" order "+ nameOfDrink + "has been prepared");},12000);
-
+console.log(name +" order "+ nameOfDrink);
+maleOrFemale();
+var data = [name, gender, type, nameOfDrink];
+for(var i=0; i<data.length; i++){
+console.log(data[i]);}
