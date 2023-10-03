@@ -37,3 +37,24 @@ maleOrFemale();
 var data = [name, gender, type, nameOfDrink];
 for(var i=0; i<data.length; i++){
 console.log(data[i]);}
+
+let div1 = document.createElement("div");
+let para1 = document.createElement("p");
+let ul1 = document.createElement("ul");
+let li1 = document.createElement("li");
+let li2 = document.createElement("li");
+let li3 = document.createElement("li");
+
+ para1.innerHTML = `Name: ${name}`;
+ li1.innerHTML = `Gender: ${gender}`;
+ li2.innerHTML = `Drink type: ${type} `;
+ li3.innerHTML = `Drink: ${nameOfDrink}`;
+
+
+div1.appendChild(para1);
+div1.appendChild(ul1);
+ul1.appendChild(li1);
+ul1.appendChild(li2);
+ul1.appendChild(li3);
+
+document.body.appendChild(div1);
